@@ -1,5 +1,7 @@
 import add from './add.js'
-import './css/index.scss'
+import './css/index.css'
+import './css/rectangle.less'
+import './css/circle.scss'
 
 const hello = () => {
   console.log('hello webpack')

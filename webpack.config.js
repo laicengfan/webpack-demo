@@ -18,6 +18,30 @@ module.exports = {
         'style-loader',
         'css-loader'
       ]
+    },{
+      // 匹配less文件
+      test: /\.less$/,
+      // loader的使用顺序 less-loader，css-loader，style-loader
+      use:[
+        'style-loader',
+        'css-loader',
+        'less-loader'
+      ]
+    },{
+      test: /\.s[ac]ss$/,
+      use:[
+        'style-loader',
+        'css-loader',
+        'sass-loader'
+      ]
+    },{
+      test: /\.(jpe?g|png|gif|webp|svg)$/,
+      type: 'asset',
+      generator: {
+        filename: 'assets/img/[hash:10][ext]'
+      }
     }]
-  }
+  },
+
+  mode:'development'
 }

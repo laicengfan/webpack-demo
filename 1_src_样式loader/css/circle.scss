@@ -1,0 +1,8 @@
+$baseCls:"webpack-circle";
+
+.#{$baseCls} {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #4285f4;
+  border-radius: 50%;
+}
