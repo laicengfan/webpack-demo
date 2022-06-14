@@ -1,0 +1,19 @@
+$baseCls:"webpack-img";
+
+.#{$baseCls} {
+  display: flex;
+  justify-content: space-between;
+  div{
+    width: 230px;
+    height: 230px;
+    &.box1{
+      background: url(../assets/img/img.png) no-repeat center /contain;
+    }
+    &.box2{
+      background: url(../assets/img/iron-man.gif) no-repeat center /contain;
+    }
+    &.box3{
+      background: url(../assets/img/mk50.jpeg) no-repeat center /contain;
+    }
+  }
+}
