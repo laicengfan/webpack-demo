@@ -1,9 +1,3 @@
-import add from './add.js'
-import './css/index.scss'
+import Header from './components/Header/index.js'
 
-const hello = () => {
-  console.log('hello webpack')
-}
-
-hello()
-console.log(add(2,3))
+Header()
