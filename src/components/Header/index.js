@@ -1,6 +1,7 @@
-import '../../css/index.scss'
+import '@/css/index.scss'
 
 const Header = () => {
+  console.log('Halo Header')
   const body = document.body
   const div = document.createElement("div")
   div.setAttribute("class","cengfan")

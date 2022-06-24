@@ -45,14 +45,9 @@ module.exports = {
         filename: 'assets/img/[hash:10][ext]'
       }
     }, {
-      test: /\.js$/,
+      test: /\.(js|ts)$/,
       exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env']
-        }
-      }
+      use: 'babel-loader',
     }]
   },
 
@@ -66,6 +61,12 @@ module.exports = {
     }),
   ],
 
+  resolve:{
+    alias: {
+      '@': resolvePath('./src')
+    },
+  },
+
   devServer: {
     host: 'localhost',
     port: 8080,
@@ -73,6 +74,8 @@ module.exports = {
     hot: true,
     // liveReload: true
   },
+
+  devtool:'cheap-module-source-map',
 
   mode: 'development'
 }
