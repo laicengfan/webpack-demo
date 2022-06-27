@@ -2,7 +2,7 @@ const path = require('path')
 // 引入插件
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
+const ESLintWebpackPlugin = require("eslint-webpack-plugin");
 
 const resolvePath = _path => path.resolve(__dirname, _path)
 
@@ -52,6 +52,10 @@ module.exports = {
   },
 
   plugins: [
+    new ESLintWebpackPlugin({
+      // 指定检查文件的根目录
+      context: resolvePath('./src'),
+    }),
     // new 实例化调用插件
     new HtmlWebpackPlugin({
       template: resolvePath('./src/index.html'),
@@ -68,6 +72,9 @@ module.exports = {
   },
 
   devServer: {
+    client:{
+      overlay: true
+    },
     host: 'localhost',
     port: 8080,
     open: true,
