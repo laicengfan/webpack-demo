@@ -1,5 +1,5 @@
 module.exports = {
-  // 继承 Eslint 规则
+/*   // 继承 Eslint 规则
   extends: ["eslint:recommended"],
   env: {
     node: true, // 启用node中全局变量
@@ -11,7 +11,7 @@ module.exports = {
   },
   rules: {
     "no-var": 2, // 不能使用 var 定义变量
-  },
+  }, */
   
   // parserOptions:{
   //   ecmaVersion: 13,
@@ -26,7 +26,7 @@ module.exports = {
   // plugins: ["@typescript-eslint"],
   // extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
 
-/*   // 继承 Eslint 规则
+  // 继承 Eslint 规则
   root: true,
   // extends: ["eslint:recommended"],
   env: {
@@ -34,7 +34,7 @@ module.exports = {
     browser: true, // 启用浏览器中全局变量
   },
   parserOptions: {
-    ecmaVersion: 6,
+    // ecmaVersion: 6,
     sourceType: "module",
   },
   rules: {
@@ -50,5 +50,5 @@ module.exports = {
   },
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
-  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"], */
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
 };

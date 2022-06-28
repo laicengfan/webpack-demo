@@ -7,7 +7,7 @@ const ESLintWebpackPlugin = require("eslint-webpack-plugin");
 const resolvePath = _path => path.resolve(__dirname, _path)
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.ts',
 
   output: {
     path: resolvePath('./dist'),

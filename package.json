@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "lint2": "eslint --ext .ts --ext .tsx src/",
+    "lint": "tsc --noEmit"
+  },
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
