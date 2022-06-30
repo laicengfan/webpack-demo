@@ -1,5 +1,10 @@
-const Add = (a: number, b: number):number => a + b
+const add = (a: number, b: number):number => a + b
 
-console.log(Add(2,'o'))
+// var a = 2
 
-export default Add
+const Hello = () => {
+  const result = add(2,'o')
+  console.log(result)
+}
+
+export default Hello
