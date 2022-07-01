@@ -1,7 +1,8 @@
 {
   "scripts": {
     "lint:es": "eslint --ext .ts src/",
-    "lint:tsc": "tsc"
+    "lint:tsc": "tsc --watch",
+    "start": "tsc && webpack serve"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
@@ -10,6 +11,7 @@
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "babel-loader": "^8.2.5",
+    "cache-loader": "^4.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^8.18.0",
     "eslint-webpack-plugin": "^3.2.0",
@@ -20,6 +22,7 @@
     "sass": "^1.52.3",
     "sass-loader": "^13.0.0",
     "style-loader": "^3.3.1",
+    "thread-loader": "^3.0.4",
     "typescript": "^4.7.4",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.9.2",
