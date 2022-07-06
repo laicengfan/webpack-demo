@@ -13,10 +13,7 @@ const threads = os.cpus().length
 
 
 module.exports = {
-  entry: {
-    index: './src/index.js',
-    main: './src/main.js',
-  },
+  entry: './src/index.js',
 
   output: {
     path: resolvePath('./dist'),
@@ -108,23 +105,8 @@ module.exports = {
     minimize: true,
     minimizer: [
       new CssMinimizerPlugin(),
-      // new TerserPlugin()
+      new TerserPlugin()
     ],
-
-    splitChunks:{
-      // 对所有模块进行分割
-      chunks:'all',
-      cacheGroups: {
-        default: {
-          // chunks需达到一定体积才能被分割，我们定义的chunk体积太小，所以更改生成 chunk 的最小体积（以 bytes 为单位）。
-          minSize: 0, 
-          minChunks: 2,
-          priority: -20,
-          // 如果当前 chunk 包含已从主 bundle 中拆分出的模块，则它将被重用，而不是生成新的模块
-          reuseExistingChunk: true,
-        }
-      }
-    }
   },
 
   resolve: {
