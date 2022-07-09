@@ -142,7 +142,7 @@ module.exports = {
     port: 8080,
     open: true,
     hot: true,
-    // liveReload: true
+    liveReload: true
   },
 
   devtool: 'cheap-module-source-map',
